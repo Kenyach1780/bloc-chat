@@ -1,1 +1,9 @@
-<h1>Home Page</h1>
+<div class="side-bar">
+    <div class="title">
+        <strong>Bloc Chat</strong>
+    </div>
+
+    <ul class="chat-rooms">
+        <li ng-repeat="currentRoom in home.roomsList">{{ currentRoom.$value }}</li>
+    </ul>
+</div>

@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
+        
     <ui-view></ui-view>
-    
+        
 <!--    <h4>Hello, World???</h4>-->
     <!-- Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
@@ -23,11 +24,11 @@
     <script>
         // Initialize Firebase
         var config = {
-            apiKey: "AIzaSyAY3dGCOhOE4se2-  _Cw7IG8uG46bAUQpLo",
+            apiKey: "AIzaSyAY3dGCOhOE4se2-_Cw7IG8uG46bAUQpLo",
             authDomain: "bloc-chat- 2928d.firebaseapp.com",
-            databaseURL: "https://bloc-chat-    2928d.firebaseio.com",
+            databaseURL: "https://bloc-chat-2928d.firebaseio.com",
             projectId: "bloc-chat-2928d",
-            storageBucket: "bloc-chat-  2928d.appspot.com",
+            storageBucket: "bloc-chat-2928d.appspot.com",
             messagingSenderId: "255300827176"
         };
         firebase.initializeApp(config);
@@ -36,5 +37,6 @@
     <!-- Application Files -->
     <script src="/scripts/app.js"></script>
     <script src="/scripts/controllers/HomeCtrl.js"></script>
+    <script src="/scripts/services/Room.js"></script>
 </body>
 </html>

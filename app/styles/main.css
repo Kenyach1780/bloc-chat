@@ -1,0 +1,22 @@
+body {
+    width: 1000px;
+    height: 800px;
+    background-color: rgba(127, 127, 127);
+}
+
+.side-bar {
+    width: 25%;
+    background-color: rgba(100, 127, 255, 0.5);
+    height: 100%;
+    padding: 20px;
+}
+
+.title {
+    font-size: 40px;
+    position: relative;
+}
+
+.chat-rooms {
+    line-height: 1.5em;
+    font-size: 17px;
+}
