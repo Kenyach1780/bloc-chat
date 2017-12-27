@@ -1,9 +1,10 @@
 <div class="side-bar">
     <div class="title">
         <strong>Bloc Chat</strong>
+        <button type="button" ng-click="home.newRoomClick()">Create New Room</button>
     </div>
 
     <ul class="chat-rooms">
-        <li ng-repeat="currentRoom in home.roomsList">{{ currentRoom.$value }}</li>
+        <li id="room" ng-repeat="currentRoom in home.roomsList">{{ currentRoom.$value }}</li>
     </ul>
 </div>

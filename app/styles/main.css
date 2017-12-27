@@ -5,7 +5,7 @@ body {
 }
 
 .side-bar {
-    width: 25%;
+    width: 30%;
     background-color: rgba(100, 127, 255, 0.5);
     height: 100%;
     padding: 20px;
@@ -19,4 +19,16 @@ body {
 .chat-rooms {
     line-height: 1.5em;
     font-size: 17px;
+    padding: 10px 30px;
 }
+
+/*
+.button {
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 5px;
+}*/
