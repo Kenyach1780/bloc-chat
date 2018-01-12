@@ -5,6 +5,24 @@
     </div>
 
     <ul class="chat-rooms">
-        <li id="room" ng-repeat="currentRoom in home.roomsList">{{ currentRoom.$value }}</li>
+        <li ng-repeat="currentRoom in home.roomsList" ng-click="home.chosenRoom(currentRoom)">
+            {{ currentRoom.$value }}
+        </li>
     </ul>
+</div>
+
+<div class="messages">
+    <div class="title">
+        <strong>Messages</strong>
+    </div>
+    
+    <header class="room-title">{{ home.activeRoom.$value }}</header>
+        <ul style="list-style-type:none">
+            <li class="messages" ng-repeat="message in home.messages">
+                <strong>
+                    <div class="username">{{ message.username }}</div>
+                </strong>
+                    <div class="timestamp">{{ message.sentAt }}</div>
+                    <div class="user-message">{{ message.content }}</div>
+        </ul>
 </div>
