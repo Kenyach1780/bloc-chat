@@ -6,12 +6,15 @@
     <div class="modal-body" id="modal-body">
         <form name="setUsername">
             <label>Enter Username: 
-                <input type="text" name="input" ng-model="$cookies.username" name="text"/>
+                <input type="text" 
+                       name="input" 
+                       ng-model="$cookies.username" 
+                       name="text">
             </label>
         </form>
     </div>
     
     <div class="modal-footer">
-        <button class="btn btn-primary" type="submit" ng-click="$cookies.setUsername()">Set username</button>
+        <button class="btn btn-primary" type="submit" ng-click="$cookies.setUsername()" ng-disabled="$cookies.username == null">Set username</button>
     </div>
 </form>

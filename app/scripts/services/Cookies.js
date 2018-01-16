@@ -7,7 +7,8 @@
                 controller: 'CookiesCtrl',
                 controllerAs: '$cookies',
                 templateUrl: '/templates/cookies.html',
-                size: 'med'
+                size: 'med',
+                backdrop: 'static'
             });
         }
     };
