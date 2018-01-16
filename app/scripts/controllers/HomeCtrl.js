@@ -6,10 +6,6 @@
                 
         this.activeRoom = null;
         
-//        this.messages = null;
-        
-//        this.messagesList = Message.all;
-        
         this.newRoomClick = function() {
             $uibModal.open({
                 controller: 'CreateRoomCtrl',
