@@ -2,7 +2,7 @@
     function CookiesCtrl($cookies, $uibModalInstance) {
                 
         this.setUsername = function() {
-            $cookies.put('blocChatCurrentUser');
+            $cookies.put('blocChatCurrentUser', this.username);
             $uibModalInstance.close();
         }
     };
