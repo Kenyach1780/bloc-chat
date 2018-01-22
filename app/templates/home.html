@@ -18,11 +18,15 @@
     
     <header class="room-title">{{ home.activeRoom.$value }}</header>
         <ul style="list-style-type:none">
-            <li class="messages" ng-repeat="message in home.messages">
+            <li class="messages" ng-repeat="message in home.messages"></li>
                 <strong>
-                    <div class="username">{{ message.username }}</div>
+                    <div class="username" id="username">{{ message.username }}</div>
                 </strong>
-                    <div class="timestamp">{{ message.sentAt }}</div>
+                    <div class="timestamp">{{ message.sentAt | date: 'shortTime' }}</div>
                     <div class="user-message">{{ message.content }}</div>
         </ul>
+    <div class="message-space">
+        <textarea type="text" class="message-box" placeholder="Type your message here" ng-model="home.newMessage.content">{{ newMessage }}</textarea>
+        <button type="button" class="button1" ng-click="home.sendMessage()">Send</button>
+    </div>
 </div>
