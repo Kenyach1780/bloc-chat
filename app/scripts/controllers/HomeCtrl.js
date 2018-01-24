@@ -6,7 +6,7 @@
                 
         this.activeRoom = null;
         
-//        this.newMessage = null;
+        this.messages = null;
         
         this.newRoomClick = function() {
             $uibModal.open({
@@ -23,17 +23,16 @@
 //            console.log(room);
         }
         
-        this.sendMessage = function(newMessage) {
-//            this.newMessage = null;
+        this.sendMessage = function() {
+
             var message = {
-                username: this.username,
-                content: this.newMessage,
-                sentAt: Date.now(),
-                roomId: this.activeRoom.$value
+//                username: this.username,
+                content: this.message,
+//                sentAt: Date.now(),
+//                roomId: this.roomId
             }
             
-            Message.send(newMessage);
-//            this.newMessage = "";
+            Message.send(message);
             console.log(message);
         }
         
