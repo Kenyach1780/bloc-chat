@@ -22,7 +22,7 @@ body {
     padding: 10px 30px;
 }
 
-div.messages {
+.message-list {
     width: 70%;
     position: absolute;
     top: 25px;
@@ -49,17 +49,19 @@ div.user-message {
     margin: 5px;
 }
 
+/*
 ul.messages {
     line-height: 3.5em;
     margin-left: 5px;
     font-size: 17px;
 }
+*/
 
-li.messages:nth-child(odd) {
+div.messages:nth-child(odd) {
     background-color: rgba(232, 232, 232, 0.5);
 }
 
-div.message-space {
+.message-space {
     position: fixed;
     bottom: 0;
     right: 0;

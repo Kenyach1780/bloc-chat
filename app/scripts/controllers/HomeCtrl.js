@@ -1,5 +1,5 @@
 (function() {
-    function HomeCtrl(Room, $uibModal, Message) {
+    function HomeCtrl(Room, $uibModal, Message, $cookies) {
         
         this.roomsList = Room.all;
 //        Room.add("room5");
@@ -20,27 +20,16 @@
         this.chosenRoom = function(room) {
             this.activeRoom = room;
             this.messages = Message.getByRoomId(room.$id);
-//            console.log(room);
+            console.log(this.messages);
         }
         
         this.sendMessage = function() {
-
-            var message = {
-//                username: this.username,
-                content: this.message,
-//                sentAt: Date.now(),
-//                roomId: this.roomId
-            }
-            
-            Message.send(message);
-            console.log(message);
+            Message.send(this.newMessage, this.activeRoom.$id, $cookies.get('blocChatCurrentUser'));
         }
         
     };
     
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['Room', '$uibModal', 'Message', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', '$uibModal', 'Message', '$cookies', HomeCtrl]);
 })();
-
-//, this.activeRoom.$id
